@@ -1,0 +1,15 @@
+﻿@model ValueTuple<HallViewModel, IEnumerable<PlaceViewModel>>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="card col-6 m-auto border-0">
+            <h5 class="card-header" style="background-color: darkseagreen;">@Model.Item1.Name</h5>
+            <div class="card-body">
+                @foreach (var item in Model.Item2)
+                {
+                    <a class="btn btn-primary" asp-action="MakeOrder" asp-route-placeId="@item.PlaceId">@item.Number</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

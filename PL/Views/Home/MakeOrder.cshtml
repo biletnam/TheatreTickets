@@ -1,0 +1,28 @@
+﻿@model OrderViewModel
+
+<div class="card m-5">
+    <h5 class="card-header text-center">Make Order</h5>
+    <div class="card-body">
+        <form class="p-a-1" asp-action="MakeOrder" method="post">
+            <div class="form-group">
+                <label asp-for="FirstName">First Name: </label>
+                <input class="form-control" asp-for="FirstName" />
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName">Email: </label>
+                <input class="form-control" asp-for="LastName" />
+            </div>
+            <div class="form-group">
+                <label asp-for="PlaceId">PlaceId: </label>
+                <input class="form-control" asp-for="PlaceId" value="@Model.PlaceId" readonly="readonly" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Number">Place number: </label>
+                <input class="form-control" asp-for="Number" value="@Model.Number" readonly="readonly" />
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit Order</button>
+            </div>
+        </form>
+    </div>
+</div>
